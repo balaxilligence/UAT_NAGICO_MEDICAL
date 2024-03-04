@@ -30,7 +30,7 @@ public class Application_Login extends BaseClass{
 		webDriverWait(ExpectedConditions.elementToBeClickable(obj.login_Button()));
 		obj.login_Button().click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(25000);
 
 		//		User Profile Name Verification 
 		webDriverWait(ExpectedConditions.visibilityOf(obj.get_User_Profile_Name()));

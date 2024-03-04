@@ -54,7 +54,7 @@ public class Issue_Policy_Reg extends BaseClass{
 		webDriverWait(ExpectedConditions.elementToBeClickable(login.login_Button()));
 		login.login_Button().click();
 
-		Thread.sleep(5000);
+		Thread.sleep(30000);
 
 		//		User Profile Name Verification 
 		webDriverWait(ExpectedConditions.visibilityOf(login.get_User_Profile_Name()));
@@ -244,7 +244,7 @@ public class Issue_Policy_Reg extends BaseClass{
 		//		Select sub Plan
 		webDriverWait(ExpectedConditions.visibilityOf(object.sub_Plan_Dropdown()));
 		selectByVisibleText(object.sub_Plan_Dropdown(), Sub_Plan);
-
+		Thread.sleep(3000);
 		//		Select Limit Basis
 		webDriverWait(ExpectedConditions.elementToBeClickable(object.limit_Basis_Dropdown()));
 		selectByVisibleText(object.limit_Basis_Dropdown(), Limit_Basis);
@@ -275,6 +275,7 @@ public class Issue_Policy_Reg extends BaseClass{
 			//			Select Emergency Cover
 			webDriverWait(ExpectedConditions.visibilityOf(object.emergency_Cover_Dropdown()));
 			selectByVisibleText(object.emergency_Cover_Dropdown(), Emergency_Cover);
+			Thread.sleep(2000);	
 			//			Emergency Cover Days
 			webDriverWait(ExpectedConditions.visibilityOf(object.emergency_Cover_Days_Field()));
 			object.emergency_Cover_Days_Field().clear();
@@ -293,7 +294,7 @@ public class Issue_Policy_Reg extends BaseClass{
 			//			Select Emergency Cover
 			webDriverWait(ExpectedConditions.visibilityOf(object.emergency_Cover_Dropdown()));
 			selectByVisibleText(object.emergency_Cover_Dropdown(), Emergency_Cover);
-
+			Thread.sleep(2000);	
 			//			Emergency Cover Days
 			webDriverWait(ExpectedConditions.visibilityOf(object.emergency_Cover_Days_Field()));
 			object.emergency_Cover_Days_Field().clear();
@@ -387,7 +388,9 @@ public class Issue_Policy_Reg extends BaseClass{
 			}
 
 		}
+		Thread.sleep(2000);	
 		webDriverWait(ExpectedConditions.elementToBeClickable(object.proceed_Button()));
+		scrollDownJavaSc(object.proceed_Button());
 		object.proceed_Button().click();
 		Member_Info_page objects = new Member_Info_page();
 
@@ -395,7 +398,7 @@ public class Issue_Policy_Reg extends BaseClass{
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.add_Member_Button()));
 		scrollUpJavaSc(objects.add_Member_Button());
 		objects.add_Member_Button().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		//		Enter Employee Name
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.employee_First_Name_Field()));
 		objects.employee_First_Name_Field().sendKeys(Employee_Name,Keys.TAB);
@@ -408,7 +411,7 @@ public class Issue_Policy_Reg extends BaseClass{
 		//		Select Plan
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.plan_Dropdown()));
 		selectByIndex(objects.plan_Dropdown(), 0);
-
+		Thread.sleep(1000);
 //		Select Gender
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.gender_Dropdown()));
 		selectByVisibleText(objects.gender_Dropdown(), Gender);
@@ -416,7 +419,7 @@ public class Issue_Policy_Reg extends BaseClass{
 		//		Select Plan
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.plan_Dropdown()));
 		selectByVisibleText(objects.plan_Dropdown(), Plan);
-
+		Thread.sleep(1000);
 		
 		//		Select Sub Plan
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.sub_Plan_Dropdown()));
@@ -431,7 +434,7 @@ public class Issue_Policy_Reg extends BaseClass{
 		objects.civil_Id_Field().sendKeys(Civil_Id,Keys.TAB);
 
 		//		Enter DOB Field
-
+		Thread.sleep(1000);
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.DOB_Field()));
 		objects.DOB_Field().click();
 		//		doubleClick(obj.DOB_Field());
@@ -460,7 +463,7 @@ public class Issue_Policy_Reg extends BaseClass{
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.save_and_Close_Button()));
 		objects.save_and_Close_Button().click();
 
-
+		
 		//		Calculate Premium
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.calculate_Premium_Button()));
 		scrollDownJavaSc(objects.calculate_Premium_Button());
@@ -469,7 +472,7 @@ public class Issue_Policy_Reg extends BaseClass{
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.yes_Button()));
 		objects.yes_Button().click();
 
-		if (Policy_Type.equals("Individual Medical")) {
+		if (Policy_Type.equals("ndividual Medical")) {
 			Thread.sleep(2000);
 			//			Click Back Button
 			webDriverWait(ExpectedConditions.elementToBeClickable(object.back_Button()));
@@ -551,6 +554,7 @@ public class Issue_Policy_Reg extends BaseClass{
 
 		Thread.sleep(2000);
 		webDriverWait(ExpectedConditions.elementToBeClickable(objects.proceed_Button()));
+		Thread.sleep(1000);
 		webDriverWait(ExpectedConditions.visibilityOf(objects.get_Premium_Amount()));
 		String premium_amount = objects.get_Premium_Amount().getText();
 		System.out.println("Premium Amount is: "+premium_amount);
@@ -603,7 +607,9 @@ public class Issue_Policy_Reg extends BaseClass{
 		} else {
 
 		}
+		Thread.sleep(2000);
 		webDriverWait(ExpectedConditions.elementToBeClickable(obje.proceed_Button()));
+		Thread.sleep(1000);
 		scrollDownJavaSc(obje.proceed_Button());
 		obje.proceed_Button().click();
 
